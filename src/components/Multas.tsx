@@ -17,6 +17,18 @@ function daysUntil(d: string) {
   return Math.round((new Date(d + "T00:00:00").getTime() - today.getTime()) / 86400000);
 }
 
+const BADGE = "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold ring-1 whitespace-nowrap";
+
+function dueBadge(status: MStatus, d: number) {
+  if (status === "paga") return { text: "Multa paga", cls: `${BADGE} bg-due-paid text-due-paid-foreground ring-due-paid-foreground/25` };
+  if (status !== "pendente") return null;
+  if (d < 0) return { text: "Multa vencida", cls: `${BADGE} bg-due-over text-due-over-foreground ring-due-over-foreground/25` };
+  const text = d === 0 ? "Vence hoje" : `Vence em ${d} ${d === 1 ? "dia" : "dias"}`;
+  return d <= 3
+    ? { text, cls: `${BADGE} bg-due-soon text-due-soon-foreground ring-due-soon-foreground/25` }
+    : { text, cls: `${BADGE} bg-due-ok text-due-ok-foreground ring-due-ok-foreground/25` };
+}
+
 export function Multas() {
   const [rows, setRows] = useState<Multa[]>([]);
   const [form, setForm] = useState(empty);
@@ -97,6 +109,7 @@ export function Multas() {
               const pend = m.status === "pendente";
               const vencida = pend && d < 0;
               const proxima = pend && d >= 0 && d <= 7;
+              const badge = dueBadge(m.status, d);
               return (
                 <tr key={m.id} className={`border-b last:border-0 ${vencida ? "bg-destructive/10" : proxima ? "bg-accent/15" : ""}`}>
                   <td className="p-3 font-medium">{m.placa}</td>
@@ -104,9 +117,10 @@ export function Multas() {
                   <td className="p-3">{m.descricao}</td>
                   <td className="p-3">{Number(m.valor).toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</td>
                   <td className="p-3">
-                    {new Date(m.vencimento + "T00:00:00").toLocaleDateString("pt-BR")}
-                    {vencida && <span className="ml-2 text-xs font-semibold text-destructive">Vencida</span>}
-                    {proxima && <span className="ml-2 text-xs font-semibold text-accent-foreground">Vence em {d}d</span>}
+                    <div className="flex flex-col items-start gap-1.5">
+                      <span>{new Date(m.vencimento + "T00:00:00").toLocaleDateString("pt-BR")}</span>
+                      {badge && <span className={badge.cls}>{badge.text}</span>}
+                    </div>
                   </td>
                   <td className="p-3">
                     <select value={m.status} onChange={(e) => setStatus(m.id, e.target.value as MStatus)} className="rounded-md border bg-background px-2 py-1">
