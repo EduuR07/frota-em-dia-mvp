@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { supabase } from "@/integrations/supabase/client";
 import type { Database } from "@/integrations/supabase/types";
+import { Multas } from "@/components/Multas";
 
 type Lead = Database["public"]["Tables"]["leads"]["Row"];
 type Status = Database["public"]["Enums"]["lead_status"];
@@ -94,6 +95,7 @@ function Login() {
 
 function Panel({ userId }: { userId: string }) {
   const [isAdmin, setIsAdmin] = useState<boolean | null>(null);
+  const [tab, setTab] = useState<"leads" | "multas">("leads");
   const [leads, setLeads] = useState<Lead[]>([]);
 
   useEffect(() => {
@@ -119,6 +121,11 @@ function Panel({ userId }: { userId: string }) {
 
   return (
     <main className="mx-auto max-w-6xl space-y-6 px-4 py-10">
+      <div className="flex gap-2">
+        <Button variant={tab === "leads" ? "default" : "outline"} onClick={() => setTab("leads")}>Leads</Button>
+        <Button variant={tab === "multas" ? "default" : "outline"} onClick={() => setTab("multas")}>Multas</Button>
+      </div>
+      {tab === "multas" ? <Multas /> : <>
       <div className="grid gap-4 sm:grid-cols-2">
         <Stat icon={Users} label="Total de leads" value={leads.length} />
         <Stat icon={UserCheck} label="Interessados (não convertidos)" value={interessados} />
@@ -146,6 +153,7 @@ function Panel({ userId }: { userId: string }) {
           </tbody>
         </table>
       </div>
+      </>}
     </main>
   );
 }
