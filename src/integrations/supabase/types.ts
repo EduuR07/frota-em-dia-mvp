@@ -47,6 +47,39 @@ export type Database = {
         }
         Relationships: []
       }
+      multas: {
+        Row: {
+          auto_infracao: string
+          created_at: string
+          descricao: string | null
+          id: string
+          placa: string
+          status: Database["public"]["Enums"]["multa_status"]
+          valor: number
+          vencimento: string
+        }
+        Insert: {
+          auto_infracao: string
+          created_at?: string
+          descricao?: string | null
+          id?: string
+          placa: string
+          status?: Database["public"]["Enums"]["multa_status"]
+          valor?: number
+          vencimento: string
+        }
+        Update: {
+          auto_infracao?: string
+          created_at?: string
+          descricao?: string | null
+          id?: string
+          placa?: string
+          status?: Database["public"]["Enums"]["multa_status"]
+          valor?: number
+          vencimento?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           id: string
@@ -81,6 +114,7 @@ export type Database = {
     Enums: {
       app_role: "admin"
       lead_status: "novo" | "em_contato" | "convertido"
+      multa_status: "pendente" | "paga" | "em_recurso"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -210,6 +244,7 @@ export const Constants = {
     Enums: {
       app_role: ["admin"],
       lead_status: ["novo", "em_contato", "convertido"],
+      multa_status: ["pendente", "paga", "em_recurso"],
     },
   },
 } as const
