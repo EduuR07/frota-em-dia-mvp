@@ -218,19 +218,19 @@ O projeto representa uma primeira versão funcional, ainda sujeita a melhorias e
 
 Apresentação da proposta de valor do Frota em Dia, destacando os problemas enfrentados pelas pequenas transportadoras e os benefícios da solução.
 
-![Landing page do Frota em Dia](screenshots/landing-page.png)
+![Landing page do Frota em Dia](https://github.com/EduuR07/frota-em-dia-mvp/blob/main/screenshots/landing-page.png?raw=true)
 
 ### Painel de leads
 
 Área administrativa para acompanhamento dos interessados cadastrados por meio do formulário.
 
-![Painel de leads](screenshots/painel-leads.png)
+![Painel de leads](https://github.com/EduuR07/frota-em-dia-mvp/blob/main/screenshots/painel-leads.png?raw=true)
 
 ### Controle de multas
 
 Módulo de gerenciamento de multas, com informações sobre infrações, valores, vencimentos e status.
 
-![Controle de multas](screenshots/controle-multas.png)
+![Controle de multas](https://github.com/EduuR07/frota-em-dia-mvp/blob/main/screenshots/controle-multas.png?raw=true)
 
 ## 13. Autor
 
