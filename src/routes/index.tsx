@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const WHATSAPP = (import.meta.env.VITE_WHATSAPP_NUMBER as string | undefined)?.replace(/\D/g, "");
+const WHATSAPP = (import.meta.env['VITE_WHATSAPP_NUMBER'] as string | undefined)?.replace(/\D/g, "");
 
 const schema = z.object({
   nome: z.string().trim().min(1, "Informe seu nome").max(100),
