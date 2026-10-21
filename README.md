@@ -211,6 +211,27 @@ O principal aprendizado foi compreender que um MVP não precisa conter todas as 
 
 O projeto representa uma primeira versão funcional, ainda sujeita a melhorias e validação com potenciais clientes.
 
+
+## Demonstração do MVP
+
+### Landing page
+
+Apresentação da proposta de valor do Frota em Dia, destacando os problemas enfrentados pelas pequenas transportadoras e os benefícios da solução.
+
+![Landing page do Frota em Dia](screenshots/landing-page.png)
+
+### Painel de leads
+
+Área administrativa para acompanhamento dos interessados cadastrados por meio do formulário.
+
+![Painel de leads](screenshots/painel-leads.png)
+
+### Controle de multas
+
+Módulo de gerenciamento de multas, com informações sobre infrações, valores, vencimentos e status.
+
+![Controle de multas](screenshots/controle-multas.png)
+
 ## 13. Autor
 
 **Eduardo Rodrigues Bueno**
