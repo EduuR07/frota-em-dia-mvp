@@ -8,3 +8,4 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+- Leads are inserted from the browser under an anon insert-only RLS policy; admin access is enforced by RLS via has_role, and the first registered user becomes admin (DB trigger).
