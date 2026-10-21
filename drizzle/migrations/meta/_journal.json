@@ -8,6 +8,13 @@
       "when": 1792592462858,
       "tag": "0000_migration",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1792594535171,
+      "tag": "0001_create_multas",
+      "breakpoints": true
     }
   ]
 }
