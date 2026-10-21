@@ -1,3 +1,4 @@
+
 # Frota em Dia — MVP de Gestão de Multas
 
 **Menos planilhas. Mais controle.**
@@ -30,15 +31,15 @@ Para a análise inicial, foi considerado o mercado brasileiro de empresas de tra
 
 | Indicador | Estimativa |
 |---|---|
-| TAM | Aproximadamente 237 mil empresas transportadoras ativas no Brasil, como referência de mercado |
-| SAM | Aproximadamente 11,9 mil empresas, considerando hipoteticamente 5% do TAM com perfil compatível |
+| TAM | Aproximadamente 237 mil empresas transportadoras, como referência preliminar de mercado |
+| SAM | Aproximadamente 11,9 mil empresas, considerando hipoteticamente 5% do TAM |
 | SOM | Meta exploratória de conquistar 20 clientes no primeiro ano |
 
-Os valores de SAM e SOM são hipóteses de planejamento, não resultados de pesquisa de campo.
+Os valores apresentados são estimativas exploratórias e hipóteses de planejamento, não resultados de pesquisa de campo. O dimensionamento deverá ser revisado com dados oficiais atualizados.
 
-**Referência setorial:** Agência Nacional de Transportes Terrestres (ANTT), dados do RNTRC e Relatório de Gestão 2025.
+**Referência setorial para aprofundamento:** Agência Nacional de Transportes Terrestres (ANTT), dados do RNTRC.
 
-Site: https://www.gov.br/antt/
+https://www.gov.br/antt/
 
 ## 4. Business Model Canvas
 
@@ -54,7 +55,7 @@ Site: https://www.gov.br/antt/
 | Parcerias principais | Transportadoras participantes do piloto e provedores de tecnologia |
 | Estrutura de custos | Hospedagem, manutenção, atendimento e divulgação |
 
-Como hipótese inicial, foi considerado um preço de R$ 79 mensais, sujeito à validação com potenciais clientes.
+Como hipótese inicial, foi considerado um preço de **R$ 79 mensais**, sujeito à validação com potenciais clientes.
 
 ## 5. Hipóteses do MVP
 
@@ -69,18 +70,21 @@ O MVP permite demonstrar a proposta e captar interessados, mas ainda não compro
 ## 6. Funcionalidades implementadas
 
 ### Landing page
+
 - Apresentação do produto.
 - Explicação dos problemas enfrentados pelas transportadoras.
 - Benefícios e funcionamento da solução.
 - Formulário para cadastro de interessados.
 
 ### Painel administrativo
+
 - Autenticação de usuários com verificação por e-mail.
 - Listagem de leads.
 - Indicadores de interessados.
 - Atualização do status dos leads.
 
 ### Controle de multas
+
 - Cadastro de multas.
 - Registro de placa, auto de infração, descrição, valor e vencimento.
 - Status de multas: Pendente, Paga e Em recurso.
@@ -89,18 +93,19 @@ O MVP permite demonstrar a proposta e captar interessados, mas ainda não compro
 - Controles de edição e exclusão.
 
 ### Persistência
+
 - Armazenamento de informações por meio do backend integrado ao projeto.
 - Manutenção dos registros e estados após atualização da página.
 
 ## 7. Tecnologias utilizadas
 
-- Lovable — construção assistida por inteligência artificial.
-- ChatGPT — estruturação da ideia, requisitos e prompts.
-- React e TypeScript — desenvolvimento da interface.
-- Vite — ambiente de desenvolvimento e build.
-- Tailwind CSS — estilização.
-- Lovable Cloud — serviços de backend e persistência.
-- Git e GitHub — versionamento e documentação.
+- **Lovable:** construção assistida por inteligência artificial.
+- **ChatGPT:** estruturação da ideia, requisitos e prompts.
+- **React e TypeScript:** desenvolvimento da interface.
+- **Vite:** ambiente de desenvolvimento e build.
+- **Tailwind CSS:** estilização.
+- **Lovable Cloud:** serviços de backend e persistência.
+- **Git e GitHub:** versionamento e documentação.
 
 ## 8. Desenvolvimento com IA
 
@@ -113,6 +118,7 @@ Foi escolhido um problema relacionado à minha experiência em logística: o con
 ### Etapa 2 — Validação preliminar
 
 Com apoio do ChatGPT, foram estruturados:
+
 - Problema e público-alvo.
 - Proposta de valor.
 - Estimativas de TAM, SAM e SOM.
@@ -211,36 +217,35 @@ O principal aprendizado foi compreender que um MVP não precisa conter todas as 
 
 O projeto representa uma primeira versão funcional, ainda sujeita a melhorias e validação com potenciais clientes.
 
-
-## Demonstração do MVP
+## 13. Demonstração do MVP
 
 ### Landing page
 
 Apresentação da proposta de valor do Frota em Dia, destacando os problemas enfrentados pelas pequenas transportadoras e os benefícios da solução.
 
-![Landing page do Frota em Dia](./screenshots/landing-page.png)
+![Landing page do Frota em Dia](screenshots/landing-page.png)
 
 ### Painel de leads
 
 Área administrativa para acompanhamento dos interessados cadastrados por meio do formulário.
 
-![Painel de leads](./screenshots/painel-leads.png)
+![Painel de leads](screenshots/painel-leads.png)
 
 ### Controle de multas
 
 Módulo de gerenciamento de multas, com informações sobre infrações, valores, vencimentos e status.
 
-![Controle de multas](./screenshots/controle-multas.png)
+![Controle de multas](screenshots/controle-multas.png)
 
-## 13. Autor
+## 14. Autor
 
 **Eduardo Rodrigues Bueno**
 
 Estudante de Análise e Desenvolvimento de Sistemas — Universidade Positivo.
 
-GitHub: https://github.com/EduuR07
+**GitHub:** https://github.com/EduuR07
 
-LinkedIn: https://www.linkedin.com/in/eduardobueno07/
+**LinkedIn:** https://www.linkedin.com/in/eduardobueno07/
 
 ---
 
