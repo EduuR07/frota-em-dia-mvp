@@ -223,7 +223,10 @@ O projeto representa uma primeira versão funcional, ainda sujeita a melhorias e
 
 Apresentação da proposta de valor do Frota em Dia, destacando os problemas enfrentados pelas pequenas transportadoras e os benefícios da solução.
 
+
 ![Landing page do Frota em Dia](screenshots/landing-page.png)
+
+
 
 ### Painel de leads
 
