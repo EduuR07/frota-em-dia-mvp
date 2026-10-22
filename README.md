@@ -223,22 +223,19 @@ O projeto representa uma primeira versão funcional, ainda sujeita a melhorias e
 
 Apresentação da proposta de valor do Frota em Dia, destacando os problemas enfrentados pelas pequenas transportadoras e os benefícios da solução.
 
-
-![Landing page do Frota em Dia](screenshots/landing-page.png)
-
-
+<img width="1904" height="917" alt="landing-page" src="https://github.com/user-attachments/assets/6f1f4131-e793-4351-a3e2-5b7e2af1db60" />
 
 ### Painel de leads
 
 Área administrativa para acompanhamento dos interessados cadastrados por meio do formulário.
 
-![Painel de leads](screenshots/painel-leads.png)
+<img width="1917" height="909" alt="painel-leads" src="https://github.com/user-attachments/assets/5601004d-97b0-45d5-994a-b72ae69217ba" />
 
 ### Controle de multas
 
 Módulo de gerenciamento de multas, com informações sobre infrações, valores, vencimentos e status.
 
-![Controle de multas](screenshots/controle-multas.png)
+<img width="1915" height="913" alt="controle-multas" src="https://github.com/user-attachments/assets/0378f426-ac58-4923-bfa3-c9893b6c4fb2" />
 
 ## 14. Autor
 
